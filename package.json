@@ -9,9 +9,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@tiptap/pm": "^2.0.0-beta.218",
-    "@tiptap/starter-kit": "^2.0.0-beta.218",
-    "@tiptap/vue-3": "^2.0.0-beta.218",
+    "@hocuspocus/provider": "^2.0.0-alpha.0",
+    "@tiptap/core": "^2.0.0-beta.220",
+    "@tiptap/extension-collaboration": "^2.0.0-beta.220",
+    "@tiptap/extension-collaboration-cursor": "^2.0.0-beta.220",
+    "@tiptap/pm": "^2.0.0-beta.220",
+    "@tiptap/starter-kit": "^2.0.0-beta.220",
+    "@tiptap/vue-3": "^2.0.0-beta.220",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },

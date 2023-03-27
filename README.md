@@ -44,3 +44,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+How to load local @hocuspocus package:
+----
+➜  hocuspocus-tiptap-testproject git:(main) ✗ rm -Rf node_modules/yjs node_modules/@hocuspocus/provider
+➜  hocuspocus-tiptap-testproject git:(main) ✗ ln -s /Users/jt/projects/uberdosis/hocuspocus/packages/provider node_modules/@hocuspocus/provider
+➜  hocuspocus-tiptap-testproject git:(main) ✗ ln -s /Users/jt/projects/uberdosis/hocuspocus/node_modules/yjs ./node_modules/yjs
+
+If that doesnt work? -> rm -Rf node_modules && npm install ; then try again
