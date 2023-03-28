@@ -5,7 +5,7 @@ import {onMounted, ref} from "vue";
 
 const status = ref('')
 const websocket = new HocuspocusProviderWebsocket({
-  url: 'ws://127.0.0.1:8080',
+  url: 'ws://127.0.0.1:1234',
   onStatus(data) {
     status.value = data.status
   }

@@ -15,7 +15,6 @@ const synced = ref('')
 const provider = new HocuspocusProvider({
   name: props.name,
   websocketProvider: props.websocket,
-  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Nzk5MTE0MjcsIm5iZiI6MTY3OTkxMTQyNywiZXhwIjoxNjc5OTE1MDI3LCJpc3MiOiJodHRwczovL3R0LWNvbGxhYi5kZSIsImF1ZCI6ImphbkBqYW50aHVyYXUuZGUifQ.4Zgvrav_Lelw2Jvf5_8BoC7JdPUBVOT6Z2RtEBlyXrI',
   onStateless({payload}){
     switch(payload){
       case 'saved':
