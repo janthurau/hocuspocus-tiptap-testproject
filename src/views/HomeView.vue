@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Note from "@/components/Note.vue";
-import {HocuspocusProviderWebsocket} from '@hocuspocus/provider'
+import {HocuspocusProviderWebsocket, TiptapCollabProviderWebsocket} from '@hocuspocus/provider'
 import {onMounted, ref} from "vue";
 
 const status = ref('')
-const websocket = new HocuspocusProviderWebsocket({
-  url: 'ws://127.0.0.1:8080',
+const websocket = new TiptapCollabProviderWebsocket({
+  appId: 'xy9dj9e6',
   onStatus(data) {
     status.value = data.status
   }
