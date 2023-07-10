@@ -5,7 +5,7 @@ import {onMounted, ref} from "vue";
 
 const status = ref('')
 const websocket = new HocuspocusProviderWebsocket({
-  url: 'ws://127.0.0.1:1234',
+  url: 'ws://127.0.0.1:8080',
   onStatus(data) {
     status.value = data.status
   }
@@ -61,7 +61,7 @@ onMounted(() => {
       <p>{{status}}</p>
     </div>
 
-    <div class="grid grid-cols-4 gap-3">
+    <div class="grid grid-cols-1 gap-3">
       <Note
         v-for="(note, key) in notes"
         class="my-5" :name="note.name" :key="key" :websocket="websocket"/>
