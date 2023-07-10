@@ -3,8 +3,10 @@ import {useEditor, EditorContent} from '@tiptap/vue-3'
 import StarterKit from '@tiptap/starter-kit'
 import {Collaboration} from "@tiptap/extension-collaboration";
 import Image from '@tiptap/extension-image'
-import {HocuspocusProviderWebsocket, TiptapCollabProvider} from '@hocuspocus/provider'
+import {HocuspocusProvider, HocuspocusProviderWebsocket} from '@hocuspocus/provider'
 import {onUnmounted, ref} from "vue";
+import {CollaborationCursor} from "@tiptap/extension-collaboration-cursor";
+import {TiptapTransformer} from "@hocuspocus/transformer";
 
 // add new prop title which is a number
 const props = defineProps<{ name: string, websocket: HocuspocusProviderWebsocket }>()
@@ -16,11 +18,10 @@ const currentVersion = ref(0)
 
 // create a method that returns a random number between variables min and max that are passed to the method
 
-const provider = new TiptapCollabProvider({
-  appId: 'xy9dj9e6',
+const provider = new HocuspocusProvider({
   name: `test-${props.name}`,
   websocketProvider: props.websocket,
-  token: '',
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.EMfozF498NIwz9weJPF3d_AVSRYS22HE39T8E4qfLI8',
   onStateless(data) {
     const payload = JSON.parse(data.payload)
 
